@@ -27,7 +27,13 @@
               <input type="text" class="form-control" placeholder="password *" formControlName="password" />
             </div>
           
-            <button (click)="register()" class="btn btn-primary"><strong>Register</strong></button>
+            <button (click)="register()" [disabled]="registerForm.invalid  || isLoading" class="btn btn-primary">
+
+            <span *ngIf="!isLoading">Register</span>
+              <div *ngIf="isLoading" class="spinner-border spinner-border-sm text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </button>
           
           </div>
         </form>

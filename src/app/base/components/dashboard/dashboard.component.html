@@ -45,7 +45,7 @@
         </a>
       </li>
       <li class="logout">
-        <a href="">
+        <a (click)="logOut()">
           <i class="fas fa-sign-out-alt"></i>
           <span>Logout</span>
         </a>
@@ -57,7 +57,7 @@
      <div class="header--title">
        <span><marquee direction="right">Manage Your Dashboard And Check Your Profile Everyday Of Effective Employee Updates</marquee> </span>
       <div>
-        <h5>Welcome user to</h5>
+        <h5>Welcome Back, {{loggedInUser.firstName}} {{loggedInUser.lastName}} </h5>
         <h2>Dashboard</h2>
       </div>
      </div>
